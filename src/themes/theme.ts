@@ -20,6 +20,8 @@ export const theme = extendTheme({
             "100": "#d1d2dc",
             "50": "#eeeef2",
             "white": "#fff",
+
+            "250": "#95A3A4",
         },
 
         yellow: {
@@ -33,6 +35,8 @@ export const theme = extendTheme({
             "200": "#F3E37C",
             "100": "#fde68a",
             "50": "#fef08a",
+
+            "450": "#FAF33E",
         },
 
         purple: {
@@ -46,7 +50,25 @@ export const theme = extendTheme({
             "200": "#e9d5ff",
             "100": "#f3e8ff",
             "50": "#fdf4ff",
+
+            "650": "#5448C8"
+        },
+
+        pink: {
+            "200": "#F991CC"
+        },
+
+        green: {
+            "600": "#119DA4",
+            "500": "#00FDDC",
+            "300": "#03B5AA"
+        },
+
+        blue: {
+            "500": "#3185FC",
+            "400": "#3C91E6"
         }
+
 
     },
     fonts: {

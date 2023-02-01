@@ -5,7 +5,7 @@ export function ButtonColorSwitch() {
     const { colorMode, toggleColorMode } = useColorMode()
     const buttonColor = useColorModeValue("gray.200", "gray.800")
     const hover = useColorModeValue("gray.100", "gray.700")
-    const bg = useColorModeValue("purple.600", "yellow.200")
+    const bg = useColorModeValue("purple.650", "green.500")
 
     return (
         <Button
