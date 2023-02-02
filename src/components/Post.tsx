@@ -1,5 +1,5 @@
 import { Avatar, Box, Button, filter, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FcLike, FcLikePlaceholder } from "react-icons/fc"
 
 export type PostProps = {
@@ -12,6 +12,8 @@ export type PostProps = {
     publishedDate: any;
 }
 
+// const apiKey = import.meta.env.API_KEY
+
 export function Post ({ name, src, author, date, title, content, publishedDate }: PostProps) {
     const border = useColorModeValue("gray.700", "gray.500")
     const text = useColorModeValue("gray.700", "gray.300")
@@ -21,6 +23,23 @@ export function Post ({ name, src, author, date, title, content, publishedDate }
     const hoverBorderButton = useColorModeValue("purple.600", "green.300")
 
     const [like, setLike] = useState<boolean>(false)
+
+    // const [post, setPost] = useState()
+
+    // const getPost = async (url: string) => {
+    //     const res = await fetch(url)
+    //     const data = await res.json()
+
+    //     setPost(data)
+    // }
+
+    // useEffect(() => {
+    //     const adviveURL = "https://api.goperigon.com/v1/all?apiKey=2d4f755b-1bad-4e7d-b7fd-4ed28310ad48"
+
+    //     getPost(adviveURL)
+    // }, [])
+
+    // console.log(post)
 
     return (
         <Flex

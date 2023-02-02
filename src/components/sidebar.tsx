@@ -1,4 +1,4 @@
-import { Button, Flex, useColorModeValue } from '@chakra-ui/react'
+import { Avatar, Box, Button, Flex, Heading, Link, useColorModeValue } from '@chakra-ui/react'
 
 export function SideBar() {
   const bgButton = useColorModeValue('white', 'gray.900')
@@ -16,10 +16,24 @@ export function SideBar() {
       borderLeft="1px"
       borderColor="gray.600"
     >
+      <Box 
+        position="absolute"
+        display="flex"
+        alignItems="center"
+        top="56px"
+        left="90px"
+        gap="16px"
+      > 
+        <Avatar src='https://avatars.githubusercontent.com/u/80000943?v=4' name="Lucas Ezidro" />
+
+        <Heading size="md">Olá Lucas Ezidro</Heading>
+      </Box>
+
+
       <Button
         position="relative"
         left="150px"
-        top="56px"
+        top="156px"
         bg={bgButton}
         border="1px"
         borderColor={borderButton}
@@ -32,6 +46,19 @@ export function SideBar() {
       >
         Novo Post
       </Button>
+
+      <Box
+        margin="auto"
+        display="flex"
+        flexDir="column"
+        gap="30px"
+        pr="100px"
+      >
+        <Link color={borderButton}>Meus Favoritos</Link>
+        <Link color={borderButton}>Meu Perfil</Link>
+        <Link color={borderButton}>Configurações</Link>
+        <Link color={borderButton}>Fale Conosco</Link>
+      </Box>
     </Flex>
   )
 }
