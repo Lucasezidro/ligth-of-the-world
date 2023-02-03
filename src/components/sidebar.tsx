@@ -1,10 +1,13 @@
 import { Avatar, Box, Button, Flex, Heading, Link, useColorModeValue } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom'
 
 export function SideBar() {
   const bgButton = useColorModeValue('white', 'gray.900')
   const borderButton = useColorModeValue('purple.650', 'green.500')
   const hoverButton = useColorModeValue('gray.200', 'gray.800')
   const hoverBorderButton = useColorModeValue('purple.600', 'green.300')
+
+  const router = useNavigate()
 
   return (
     <Flex
@@ -37,7 +40,7 @@ export function SideBar() {
         bg={bgButton}
         border="1px"
         borderColor={borderButton}
-        onClick={() => {}}
+        onClick={() => router("/create-post")}
         transition="all 0.5s"
         _hover={{
           bg: hoverButton,

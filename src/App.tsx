@@ -1,14 +1,17 @@
 import React from 'react'
 import { Home } from './pages/Home/home'
-import { Box, useColorModeValue } from '@chakra-ui/react'
+import { Outlet } from 'react-router-dom'
+import { CreatePost } from './pages/createPost/createPost'
+import { ReadPost } from './pages/ReadPost/ReadPost'
+import { ChakraProvider } from '@chakra-ui/react'
+import { theme } from './themes/theme'
 
 function App() {
-  const backgroundColor = useColorModeValue("white", "gray.900")
 
   return (
-    <Box bg={backgroundColor}>
-      <Home />
-    </Box>
+      <ChakraProvider theme={theme}>
+        <Outlet />
+      </ChakraProvider>
   )
 }
 

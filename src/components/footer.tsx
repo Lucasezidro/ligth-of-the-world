@@ -4,6 +4,7 @@ import { GrInstagram } from "react-icons/gr"
 export function Footer () {
     const footerColor = useColorModeValue("purple.650", "green.500")
     const textColor = useColorModeValue("gray.900", "gray.300")
+    const bg = useColorModeValue("white", "gray.900")
 
     return (
         <Flex
@@ -19,6 +20,7 @@ export function Footer () {
             right="0"
             bottom="0"
             padding="56px"
+            bg={bg}
         >
             <Box display="flex" gap="10px">
                 <Link 
@@ -35,7 +37,7 @@ export function Footer () {
             </Box>
 
             <Box>
-                <Link href="/" color={footerColor}>Ver mais conteúdos</Link>
+                <Link href="/content" color={footerColor}>Ver mais conteúdos</Link>
             </Box>
          </Flex>
     )
