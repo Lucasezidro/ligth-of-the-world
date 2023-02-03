@@ -97,6 +97,7 @@ export function CreatePost() {
           }}
           onChange={(e) => setTitlePost(e.target.value)}
           value={titlePost}
+          placeholder="Titulo"
         />
         {!isError ? (
           <FormHelperText mb="32px">Digite o titulo do tema do seu post</FormHelperText>
@@ -114,7 +115,8 @@ export function CreatePost() {
           }}
           onChange={(e) => setContent(e.target.value)}
           value={content}
-        ></Textarea>
+          placeholder="Conteúdo"
+        />
         {!isError ? (
           <FormHelperText mb="32px">Descreva a tese de seu Post</FormHelperText>
         ) : (
